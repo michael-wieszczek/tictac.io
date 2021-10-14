@@ -11,7 +11,7 @@ var oPoints = 0;
 const filledChance = 2;
 const BOARDSIZE = 100;
 
-
+// Determines if all squares are filled on board
 function isGameOver() {
     if (counter == 0) {
         return true;
