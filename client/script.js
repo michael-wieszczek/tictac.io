@@ -5,7 +5,7 @@ var myTurn = true;
 var symbol;
 var initalizedBoard = false;
 var filledCounter = 0;
-var counter = 100;
+var counter = 101; // was extra turn when set to 100
 var xPoints = 0;
 var oPoints = 0;
 const filledChance = 2;
