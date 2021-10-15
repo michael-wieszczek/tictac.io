@@ -8,7 +8,7 @@ var filledCounter = 0;
 var counter = 100; 
 var xPoints = 0;
 var oPoints = 0;
-const filledChance = 9;
+const filledChance = 2;
 const BOARDSIZE = 100;
 
 // Determines if all squares are filled on board
