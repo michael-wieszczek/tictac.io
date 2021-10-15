@@ -5,15 +5,15 @@ var myTurn = true;
 var symbol;
 var initalizedBoard = false;
 var filledCounter = 0;
-var counter = 101; // was extra turn when set to 100
+var counter = 100; 
 var xPoints = 0;
 var oPoints = 0;
-const filledChance = 2;
+const filledChance = 9;
 const BOARDSIZE = 100;
 
 // Determines if all squares are filled on board
 function isGameOver() {
-    if (counter == 0) {
+    if (counter <= 0) {
         return true;
     }
     return false;
@@ -40,6 +40,9 @@ function makeMove(e) {
                 });
             }
           });
+          if (((filledCounter % 2) != 0) && (symbol == "O")) {
+            counter++; // this is added to fix bug where game ends early if odd number of filled spaces
+        }
     } else {
         if (!myTurn) {
             return; // Shouldn't happen since the board is disabled
@@ -57,7 +60,6 @@ function makeMove(e) {
 }
 
 function pointTally() {
-    //var state = getBoardState();
     var board = [BOARDSIZE];
     var j = 0;
     $(".board button").each(function() {
