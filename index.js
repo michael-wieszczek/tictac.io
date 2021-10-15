@@ -1,10 +1,11 @@
+var PORT = process.env.PORT || 8080;
 const http = require("http")
 const express = require("express");
 const app = express();
 const socketIo = require("socket.io");
 const fs = require("fs");
 
-const server = http.Server(app).listen(8080);
+const server = http.Server(app).listen(PORT);
 const io = socketIo(server);
 const clients = {};
 
