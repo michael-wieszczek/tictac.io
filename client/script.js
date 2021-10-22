@@ -134,6 +134,7 @@ function pointTally() {
 socket.on("move.made", function(data) { // Render move
     if (data.symbol == "F") {
         $("#" + data.position).css({"background-color": "black"});
+        $("#" + data.position).text(data.symbol);
     } else {
         $("#" + data.position).text(data.symbol);
     }
